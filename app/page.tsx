@@ -1,14 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
 import { BadgeCheck, MapPin, UsersRound } from "lucide-react";
 import { ContactActions } from "@/components/contact-actions";
 import { HeroAtmosphereLoader } from "@/components/hero-atmosphere-loader";
 import { SectionHeading } from "@/components/section-heading";
+import { SiteImage as Image } from "@/components/site-image";
 import { StructuredData } from "@/components/structured-data";
 import { ButtonLink } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { InfiniteSliderHorizontal } from "@/components/ui/infinite-slider-horizontal";
 import { Reveal } from "@/components/ui/reveal";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/site-config";
 
 const services = [
@@ -57,7 +58,7 @@ export default function Home() {
         <div className="hero-grid absolute inset-0 -z-20" />
         <div className="hero-glow hero-glow-animated absolute inset-0 -z-10" />
         <HeroAtmosphereLoader />
-        <div className="singthesong-bg absolute inset-0 -z-10" aria-hidden="true" />
+        <div className="singthesong-bg absolute inset-0 -z-10" style={{ backgroundImage: `url("${assetPath("/animations/singthesong.svg")}")` }} aria-hidden="true" />
         <div className="site-container grid min-h-[92svh] items-center gap-10 pb-14 pt-32 lg:grid-cols-[.88fr_1.12fr] lg:pb-16 lg:pt-28">
           <Reveal className="relative z-10 max-w-2xl">
             <p className="eyebrow mb-6">Darende · Malatya</p>

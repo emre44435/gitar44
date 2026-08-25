@@ -40,7 +40,7 @@ button { font: inherit; color: inherit; }
 .hero-grid { opacity: .16; background-image: linear-gradient(rgba(255,255,255,.11) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.11) 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(to bottom, black, transparent 91%); }
 .hero-glow { background: radial-gradient(circle at 78% 45%, rgba(247,144,137,.16), transparent 25%), radial-gradient(circle at 20% 20%, rgba(42,38,94,.72), transparent 38%), linear-gradient(135deg, #0a0d1a 35%, #11152b); }
 .hero-glow-animated { background-size: 120% 120%; animation: ambient-shift 18s ease-in-out infinite alternate; }
-.singthesong-bg { background-image: url("/animations/singthesong.svg"); background-position: left center; background-repeat: no-repeat; background-size: min(82vw, 68rem) auto; opacity: .045; mix-blend-mode: screen; pointer-events: none; }
+.singthesong-bg { background-position: left center; background-repeat: no-repeat; background-size: min(82vw, 68rem) auto; opacity: .045; mix-blend-mode: screen; pointer-events: none; }
 .page-hero { min-height: 38rem; display: grid; align-items: center; }
 .hero-atmosphere-shell { position: absolute; inset: 0; z-index: -5; overflow: hidden; pointer-events: none; perspective: 900px; }
 .hero-atmosphere-fallback { position: absolute; inset: 0; background: radial-gradient(ellipse at 72% 8%, rgba(247,144,137,.15), transparent 36%), linear-gradient(105deg, transparent 35%, rgba(252,58,48,.035) 58%, transparent 76%); }

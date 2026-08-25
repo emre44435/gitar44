@@ -4,6 +4,7 @@ import "@fontsource-variable/sora";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { MobileWhatsapp } from "@/components/mobile-whatsapp";
+import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/site-config";
 import "./globals.css";
 
@@ -21,8 +22,8 @@ export const metadata: Metadata = {
   publisher: siteConfig.name,
   category: "Müzik eğitimi ve gitar mağazası",
   alternates: { canonical: siteConfig.url },
-  manifest: "/manifest.webmanifest",
-  icons: { icon: [{ url: "/icon.png", type: "image/png", sizes: "512x512" }], apple: [{ url: "/icon.png", sizes: "512x512" }] },
+  manifest: assetPath("/manifest.webmanifest"),
+  icons: { icon: [{ url: assetPath("/icon.png"), type: "image/png", sizes: "512x512" }], apple: [{ url: assetPath("/icon.png"), sizes: "512x512" }] },
   openGraph: { type: "website", locale: siteConfig.locale, url: siteConfig.url, siteName: siteConfig.name, title: "Darende Gitar Dersi ve Gitar Satışı | Darende Gitar", description: "Darende’de gitar dersi, akustik, klasik ve elektro gitar seçenekleri, gitar aksesuarları, bakım ve tel değişimi hakkında bilgi alın.", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Darende’de Gitarla Tanış — Darende Gitar" }] },
   twitter: { card: "summary_large_image", title: "Darende Gitar Dersi ve Gitar Satışı | Darende Gitar", description: "Darende’de gitar dersi, gitar seçenekleri, aksesuar, bakım ve tel değişimi.", images: ["/og.png"] },
 };

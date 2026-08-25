@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { BadgeCheck, Guitar, MapPin } from "lucide-react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ContactActions } from "@/components/contact-actions";
+import { SiteImage as Image } from "@/components/site-image";
 import { SectionHeading } from "@/components/section-heading";
 import { StructuredData } from "@/components/structured-data";
 import { Reveal } from "@/components/ui/reveal";

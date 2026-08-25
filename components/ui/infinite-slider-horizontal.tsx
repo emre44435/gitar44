@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion, useAnimationFrame, useMotionValue } from "framer-motion";
 import useMeasure from "react-use-measure";
 import { useEffect, useRef, useState } from "react";
 import { useHydratedReducedMotion } from "@/lib/use-hydrated-reduced-motion";
+import { SiteImage as Image } from "@/components/site-image";
 
 const images = [
   ["/images/02-birebir-gitar-dersi.webp", "Birebir gitar dersi çalışma düzeni"],

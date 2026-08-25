@@ -1,8 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BadgeCheck, Check } from "lucide-react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ContactActions } from "@/components/contact-actions";
+import { SiteImage as Image } from "@/components/site-image";
 import { StructuredData } from "@/components/structured-data";
 import { Reveal } from "@/components/ui/reveal";
 import { siteConfig } from "@/site-config";

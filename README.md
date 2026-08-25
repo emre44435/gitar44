@@ -54,6 +54,8 @@ git push -u origin main
 
 `.github/workflows/deploy.yml`, `main` dalına her gönderimde bağımlılıkları kurar, statik build alır ve `out/` klasörünü GitHub Pages’a yükler.
 
+Workflow, proje deposunun adını otomatik olarak GitHub Pages alt yolu şeklinde build'e ekler. Böylece site özel alan adı bağlanmadan önce de `KULLANICI.github.io/REPO/` adresinde CSS, JavaScript ve görselleriyle eksiksiz çalışır.
+
 1. GitHub reposunda **Settings → Pages** bölümünü açın.
 2. **Build and deployment → Source** alanında **GitHub Actions** seçin.
 3. `main` dalına gönderim yaptıktan sonra **Actions** sekmesindeki iş akışının tamamlanmasını bekleyin.
@@ -61,6 +63,8 @@ git push -u origin main
 5. DNS yayıldıktan sonra **Enforce HTTPS** seçeneğini etkinleştirin.
 
 `public/CNAME` içinde alan adı, `public/.nojekyll` içinde Jekyll devre dışı bırakma işareti hazırdır.
+
+Özel alan adı etkinleştirildiğinde workflow'daki `NEXT_PUBLIC_BASE_PATH` ve `NEXT_PUBLIC_SITE_URL` ortam değerlerini kaldırıp yeniden build alın; özel alan adı sitenin kökünden hizmet verir.
 
 ## `darendegitar.com` DNS ayarları
 
