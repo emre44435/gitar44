@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowRight, BookOpenCheck, GraduationCap, Package, ShoppingBag, UsersRound, Wrench } from "lucide-react";
+import { ArrowRight, BookOpenCheck, Guitar, ListMusic, Music2, Target, UsersRound } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useHydratedReducedMotion } from "@/lib/use-hydrated-reduced-motion";
 
-const icons = { GraduationCap, BookOpenCheck, UsersRound, ShoppingBag, Package, Wrench };
+const icons = { Target, BookOpenCheck, UsersRound, Guitar, ListMusic, Music2 };
 
 type GlassCardProps = {
   title: string;

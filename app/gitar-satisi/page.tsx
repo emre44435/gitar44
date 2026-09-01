@@ -1,18 +1,18 @@
 import { DetailPage, type DetailPageProps } from "@/components/detail-page";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata("Darende Gitar Satışı ve Seçim Desteği | Darende Gitar", "Darende’de akustik, klasik ve elektro gitar seçeneklerini inceleyin; kullanım amacınıza uygun gitar seçimi için destek alın.", "/gitar-satisi/");
+export const metadata = pageMetadata("Darende Birebir Gitar Dersi | Darende Gitar", "Darende’de seviyenize ve müzik hedefinize göre hazırlanan birebir gitar dersi programını inceleyin.", "/gitar-satisi/");
 
 const data: DetailPageProps = {
-  path: "/gitar-satisi/", eyebrow: "Darende gitar satışı", title: "Sana uyan gitarı birlikte seçelim.",
-  description: "Sadece görünüşe değil; çalım rahatlığına, hedefe ve enstrümanın verdiği hissiyata odaklanan seçim desteği.",
-  image: "/images/08-gitar-satis-vitrini.webp", imageAlt: "Darende Gitar akustik, klasik ve elektro gitar satış vitrini",
-  introTitle: "İyi seçim, çalma isteğini büyütür.",
-  intro: ["İlk gitar seçimi çoğu zaman tel türü, gövde yapısı, sap hissi ve kullanım amacı gibi ayrıntılar nedeniyle karmaşık görünür. Darende gitar satışı yaklaşımımızda önce ne çalmak istediğini ve gitarla nasıl vakit geçireceğini anlamaya odaklanırız.", "Akustik, klasik ve elektro gitarlar aynı deneyimi sunmaz. El yapına uygun sap, konforlu gövde ve seviyene uygun çalım hissi; enstrümanla düzenli bağ kurmanda ürün üzerindeki süslü özelliklerden daha belirleyici olabilir."],
-  highlights: ["Akustik, klasik ve elektro gitar seçenekleri", "Başlangıç seviyesine uygun seçim rehberliği", "Boyut, tel yapısı ve çalım konforu değerlendirmesi", "Satış sonrası bakım ve tel değişimi desteği"],
-  sections: [{ title: "Amacını belirle", body: "Evde şarkılara eşlik etmek, klasik teknik çalışmak veya amfiyle farklı tonlar keşfetmek; gitar türü seçiminde başlangıç noktasıdır." }, { title: "Konforu karşılaştır", body: "Sap hissi, tel direnci, gövde boyutu ve ağırlık gibi ayrıntılar çalım pozisyonunu ve çalışma süresini doğrudan etkiler." }, { title: "Bakımı planla", body: "Tel seçimi, akort alışkanlığı ve düzenli kontrol hakkında temel bilgi almak, yeni gitarın dengeli kalmasına yardımcı olur." }],
-  faq: [{ question: "Başlangıç için hangi gitar türü daha uygundur?", answer: "Tek bir doğru yoktur. Dinlediğin müzik, tel hissi, el yapın ve çalışma ortamın birlikte değerlendirilerek klasik, akustik veya elektro gitar seçilebilir." }, { question: "Gitar fiyatlarını neden sitede göremiyorum?", answer: "Ürün, marka, stok ve fiyat bilgisi doğrulanmadan paylaşılmaz. Güncel seçenekler için doğrudan iletişim kurabilirsin." }, { question: "Satın almadan önce seçim desteği alabilir miyim?", answer: "Evet. Hedefini ve deneyim seviyeni anlatarak hangi gitar türünün daha uygun olabileceği hakkında destek isteyebilirsin." }],
-  message: "Merhaba, Darende gitar satışı ve uygun gitar seçimi hakkında bilgi almak istiyorum.", related: [{ label: "Akustik gitar", href: "/akustik-gitar/" }, { label: "Klasik gitar", href: "/klasik-gitar/" }, { label: "Elektro gitar", href: "/elektro-gitar/" }],
+  path: "/gitar-satisi/", eyebrow: "Birebir gitar dersi", title: "Ders senin hızında ilerlesin.",
+  description: "Başlangıçtan ileri seviyeye, hedeflerine ve müzik zevkine göre şekillenen kişisel gitar eğitimi.",
+  image: "/images/02-birebir-gitar-dersi.webp", imageAlt: "Darende’de birebir gitar dersi çalışma ortamı",
+  introTitle: "Her öğrenci için ayrı bir yol.",
+  intro: ["Birebir derslerde anlatım, egzersiz ve parça seçimi öğrencinin mevcut seviyesine göre düzenlenir. Zorlanan noktalar yakından takip edilir ve gereksiz karmaşaya girmeden küçük hedeflerle ilerlenir.", "Ders planı; yaş, müzik zevki, gitar türü ve evde ayrılabilecek çalışma süresi birlikte düşünülerek hazırlanır."],
+  highlights: ["Kişisel ders planı", "Seviyeye uygun teknik çalışmalar", "Sevilen şarkılarla uygulama", "Düzenli gelişim takibi"],
+  sections: [{ title: "Seviyeni belirle", body: "Başlangıç noktan ve hedeflerin konuşularak sana uygun ders akışı oluşturulur." }, { title: "Tekniği geliştir", body: "İki el koordinasyonu, ritim ve temiz ses üretimi düzenli egzersizlerle çalışılır." }, { title: "Müziğe dönüştür", body: "Öğrenilen teknikler seviyene uygun parçalarla kalıcı hâle getirilir." }],
+  faq: [{ question: "Birebir dersin avantajı nedir?", answer: "Dersin hızı, anlatım biçimi ve çalışmalar doğrudan öğrencinin ihtiyacına göre düzenlenir." }, { question: "Sıfırdan başlayabilir miyim?", answer: "Evet. Gitarı tanıma, doğru oturuş ve ilk seslerden başlanır." }, { question: "Ders programını nasıl öğrenebilirim?", answer: "Uygun günler ve güncel ders bilgisi için iletişim sayfasından ulaşabilirsin." }],
+  message: "Merhaba, Darende birebir gitar dersi hakkında bilgi almak istiyorum.", related: [{ label: "Gitar dersi", href: "/gitar-dersi/" }, { label: "Akustik gitar dersi", href: "/akustik-gitar/" }, { label: "İletişim", href: "/iletisim/" }],
 };
 
 export default function Page() { return <DetailPage {...data} />; }

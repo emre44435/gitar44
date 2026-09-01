@@ -17,8 +17,7 @@ export const siteConfig = {
 export const navigation = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Gitar Dersi", href: "/gitar-dersi/" },
-  { label: "Gitar Satışı", href: "/gitar-satisi/" },
-  { label: "Hizmetler", href: "/#hizmetler" },
+  { label: "Ders Programları", href: "/#hizmetler" },
   { label: "Hakkımızda", href: "/hakkimizda/" },
   { label: "İletişim", href: "/iletisim/" },
 ] as const;

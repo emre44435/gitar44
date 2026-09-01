@@ -1,18 +1,18 @@
 import { DetailPage, type DetailPageProps } from "@/components/detail-page";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata("Darende Gitar Aksesuarları | Tel, Pena ve Daha Fazlası", "Darende’de gitar teli, pena, askı, kablo ve temel gitar aksesuarları hakkında bilgi ve seçim desteği alın.", "/gitar-aksesuarlari/");
+export const metadata = pageMetadata("Darende Başlangıç Gitar Dersi | Darende Gitar", "Darende’de sıfırdan başlayanlar için anlaşılır ve birebir gitar dersi.", "/gitar-aksesuarlari/");
 
 const data: DetailPageProps = {
-  path: "/gitar-aksesuarlari/", eyebrow: "Darende gitar aksesuarları", title: "Küçük detaylar, daha rahat bir çalım.",
-  description: "Tel, pena, askı, kablo ve bakım ürünlerinde gitarınla ve çalım alışkanlığınla uyumlu seçimler.",
-  image: "/images/09-gitar-aksesuarlari.webp", imageAlt: "Gitar teli, pena, askı ve bakım ürünlerinden oluşan aksesuar düzeni",
-  introTitle: "İhtiyacın kadar, doğru ekipman.",
-  intro: ["Gitar aksesuarları enstrümanın yerini almaz; fakat akorttan taşıma güvenliğine, çalım konforundan ton tutarlılığına kadar günlük deneyimi belirgin biçimde etkiler. Her ürün her gitar türünde aynı sonucu vermez.", "Darende gitar aksesuarları için tel türü, pena kalınlığı, askı güvenliği veya kablo uzunluğu seçilirken kullanım biçimi temel alınır. Amaç, gereksiz ekipman biriktirmek değil; gerçekten işe yarayan parçaları doğru sırada tamamlamaktır."],
-  highlights: ["Klasik, akustik ve elektro gitar için tel seçenekleri", "Farklı kalınlık ve malzemede pena yaklaşımı", "Askı, kablo, kılıf ve akort ihtiyaçları", "Temel temizlik ve bakım ürünleri hakkında yönlendirme"],
-  sections: [{ title: "Tel ve pena", body: "Gitar türüne uygun tel seçimi güvenlik ve ton için kritiktir. Pena kalınlığı ise atak, kontrol ve ritim hissini değiştirir." }, { title: "Taşıma ve koruma", body: "Kılıf, stand ve güvenli askı çözümleri gitarı darbe, düşme ve çevresel etkilerden korumaya yardımcı olur." }, { title: "Bağlantı ve akort", body: "Elektro sistemlerde sağlam kablo; her gitar türünde güvenilir akort çözümü düzenli çalışmanın temelidir." }],
-  faq: [{ question: "Her tel her gitara takılır mı?", answer: "Hayır. Klasik gitara çelik tel takmak gibi yanlış eşleşmeler enstrümana zarar verebilir. Gitar türüne ve yapısına uygun tel kullanılmalıdır." }, { question: "Başlangıç için hangi pena kalınlığı uygundur?", answer: "Çalım tarzına göre değişir. Ritim çalışmasında daha esnek, tek nota kontrolünde daha sert pena tercih edilebilir; el hissiyle karşılaştırmak faydalıdır." }, { question: "Gitarı standda mı kılıfta mı saklamalıyım?", answer: "Ortamın nemi, ısısı, güvenliği ve kullanım sıklığına göre karar verilir. Darbe ve ani ısı değişimlerinden kaçınmak gerekir." }],
-  message: "Merhaba, Darende gitar aksesuarları hakkında bilgi almak istiyorum.", related: [{ label: "Gitar bakımı", href: "/gitar-bakim-tel-degisimi/" }, { label: "Elektro gitar", href: "/elektro-gitar/" }, { label: "Gitar satışı", href: "/gitar-satisi/" }],
+  path: "/gitar-aksesuarlari/", eyebrow: "Başlangıç gitar dersi", title: "İlk akorunu güvenle bas.",
+  description: "Daha önce gitar çalmamış öğrenciler için sade, anlaşılır ve adım adım ilerleyen birebir ders programı.",
+  image: "/images/03-baslangic-gitar-dersi.webp", imageAlt: "Başlangıç gitar dersi çalışma alanı",
+  introTitle: "Başlamak için deneyim gerekmez.",
+  intro: ["Başlangıç derslerinde gitarı tanıma, doğru oturuş, akort ve temiz ses üretimi ele alınır. Her yeni konu küçük ve ulaşılabilir çalışmalarla pekiştirilir.", "Amaç hızlı görünmek değil, sağlam bir temel kurmaktır. Düzenli tekrarlarla akor geçişleri, ritim duygusu ve iki el koordinasyonu doğal biçimde gelişir."],
+  highlights: ["Sıfırdan başlayanlara uygun", "Doğru oturuş ve el pozisyonu", "Temel akor ve ritim çalışmaları", "Kısa ve anlaşılır ev hedefleri"],
+  sections: [{ title: "Gitarı tanı", body: "Gitarın bölümleri, doğru tutuş ve akort temel bilgilerle açıklanır." }, { title: "İlk sesleri çıkar", body: "Sol el yerleşimi ve sağ el hareketi temiz ses hedefiyle çalışılır." }, { title: "İlk şarkını çal", body: "Temel akor ve ritimler kolay parçalar üzerinde birleştirilir." }],
+  faq: [{ question: "Nota bilmem gerekiyor mu?", answer: "Hayır. Gerekli bilgiler ders içinde uygulamayla birlikte öğrenilir." }, { question: "Kaç yaşında başlanabilir?", answer: "Yaşla birlikte el yapısı, dikkat süresi ve ilgi değerlendirilerek uygun ders akışı belirlenir." }, { question: "Ne kadar sürede şarkı çalabilirim?", answer: "İlerleme düzenli çalışmaya göre değişir; ilk hedefler öğrencinin temposuna göre belirlenir." }],
+  message: "Merhaba, Darende başlangıç gitar dersi hakkında bilgi almak istiyorum.", related: [{ label: "Gitar dersi", href: "/gitar-dersi/" }, { label: "Klasik gitar dersi", href: "/klasik-gitar/" }, { label: "İletişim", href: "/iletisim/" }],
 };
 
 export default function Page() { return <DetailPage {...data} />; }

@@ -1,18 +1,18 @@
 import { DetailPage, type DetailPageProps } from "@/components/detail-page";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata("Darende Akustik Gitar Seçenekleri | Darende Gitar", "Darende’de akustik gitar seçerken gövde yapısı, çalım hissi ve kullanım amacına göre destek alın.", "/akustik-gitar/");
+export const metadata = pageMetadata("Darende Akustik Gitar Dersi | Darende Gitar", "Darende’de akor, ritim ve şarkı eşliği odaklı birebir akustik gitar dersi alın.", "/akustik-gitar/");
 
 const data: DetailPageProps = {
-  path: "/akustik-gitar/", eyebrow: "Darende akustik gitar", title: "Doğal, canlı ve her an çalmaya hazır.",
-  description: "Şarkılara eşlik etmekten kendi bestelerini geliştirmeye uzanan güçlü ve doğrudan bir akustik gitar deneyimi.",
-  image: "/images/05-akustik-gitar.webp", imageAlt: "Koyu stüdyo ortamında doğal ahşap akustik gitar",
-  introTitle: "Ahşabın sıcaklığı, tellerin açık sesi.",
-  intro: ["Akustik gitar, amfiye ihtiyaç duymadan dolgun ve parlak bir ses sunar. Çelik telleri ve farklı gövde seçenekleri sayesinde ritim ağırlıklı eşliklerde, modern parçalarda ve parmak stili çalışmalarda geniş bir karaktere sahiptir.", "Darende akustik gitar seçiminde gövdenin oturuşu, sap rahatlığı ve tel yüksekliği önemlidir. Yeni başlayanlar için yalnızca ses gücü değil, uzun süre çalarken hissedilen konfor da değerlendirilmelidir."],
-  highlights: ["Amfisiz, güçlü ve doğal ses", "Ritim ve şarkı eşliği için geniş kullanım", "Farklı gövde yapılarında seçim desteği", "Tel ve bakım konusunda yerel destek"],
-  sections: [{ title: "Gövde karakteri", body: "Gövde boyutu ve derinliği hem sesin dolgunluğunu hem de gitarın kucakta nasıl hissettirdiğini değiştirir." }, { title: "Tel hissi", body: "Çelik teller canlı bir ton verir. Uygun tel kalınlığı ve doğru yükseklik, özellikle başlangıç döneminde çalım konforunu etkiler." }, { title: "Kullanım alanı", body: "Ev çalışması, sahne planı veya kayıt hedefi varsa gitarın yapısı ve bağlantı ihtiyacı buna göre düşünülmelidir." }],
-  faq: [{ question: "Akustik gitar başlangıç için uygun mu?", answer: "Evet; özellikle çelik tel sesini seven ve şarkılara eşlik etmek isteyenler için uygundur. Tel hissine alışma süreci kişiden kişiye değişebilir." }, { question: "Akustik gitar amfi olmadan çalınır mı?", answer: "Evet. Akustik gövde sesi doğal olarak yükseltir. Elektro-akustik modellerde ayrıca ses sistemine bağlantı seçeneği bulunabilir." }, { question: "Akustik gitar teli ne zaman değişir?", answer: "Çalım sıklığı, terleme ve saklama koşullarına göre değişir. Matlaşan ton, zor akort ve renk değişimi tel yenileme zamanına işaret edebilir." }],
-  message: "Merhaba, Darende akustik gitar seçenekleri hakkında bilgi almak istiyorum.", related: [{ label: "Gitar satışı", href: "/gitar-satisi/" }, { label: "Gitar dersi", href: "/gitar-dersi/" }, { label: "Tel değişimi", href: "/gitar-bakim-tel-degisimi/" }],
+  path: "/akustik-gitar/", eyebrow: "Darende akustik gitar dersi", title: "Akorları öğren, şarkılara eşlik et.",
+  description: "Sıfırdan başlayanlar ve ritmini geliştirmek isteyenler için birebir akustik gitar dersi.",
+  image: "/images/05-akustik-gitar.webp", imageAlt: "Akustik gitar dersi için doğal ahşap gitar",
+  introTitle: "Ritmini sağlam bir temelle kur.",
+  intro: ["Akustik gitar dersleri doğru oturuş, akort, temel akorlar ve ritim kalıplarıyla başlar. Öğrendiğin teknikler sevdiğin şarkılarla birleştirilerek çalışma süreci daha anlaşılır ve motive edici hâle gelir.", "Ders programı mevcut seviyene, müzik zevkine ve evde ayırabildiğin zamana göre düzenlenir. Amaç yalnızca akor ezberlemek değil; temiz geçişler, dengeli ritim ve müzikal ifade geliştirmektir."],
+  highlights: ["Birebir ve seviyeye uygun ders planı", "Temel akorlar ve temiz geçişler", "Ritim kalıpları ve şarkı eşliği", "Düzenli ev çalışması için net hedefler"],
+  sections: [{ title: "Temel akorlar", body: "Sol el yerleşimi ve temiz ses üretimi küçük egzersizlerle adım adım geliştirilir." }, { title: "Ritim duygusu", body: "Sağ el hareketi, tempo takibi ve farklı ritim kalıpları sevilen parçalar üzerinde çalışılır." }, { title: "Şarkı eşliği", body: "Öğrenilen akor ve ritimler seviyeye uygun şarkılarda birleştirilerek akıcı çalım hedeflenir." }],
+  faq: [{ question: "Akustik gitar başlangıç için uygun mu?", answer: "Evet. Özellikle şarkılara eşlik etmek ve ritim çalmak isteyen öğrenciler doğrudan akustik gitarla başlayabilir." }, { question: "Nota bilmeden derse başlayabilir miyim?", answer: "Evet. Nota bilgisi başlangıç şartı değildir; gerekli bilgiler ders içinde uygulamayla birlikte öğrenilir." }, { question: "Derslerde hangi şarkılar çalışılır?", answer: "Parçalar öğrencinin seviyesine ve müzik zevkine göre seçilir; teknik hedeflere uygun biçimde sadeleştirilir." }],
+  message: "Merhaba, Darende akustik gitar dersi hakkında bilgi almak istiyorum.", related: [{ label: "Gitar dersi", href: "/gitar-dersi/" }, { label: "Klasik gitar dersi", href: "/klasik-gitar/" }, { label: "İletişim", href: "/iletisim/" }],
 };
 
 export default function Page() { return <DetailPage {...data} />; }

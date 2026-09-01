@@ -15,18 +15,18 @@ export const viewport: Viewport = { themeColor: "#0A0D1A", colorScheme: "dark", 
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
-  title: { default: "Darende Gitar Dersi ve Gitar Satışı | Darende Gitar", template: "%s" },
-  description: "Darende’de gitar dersi, akustik, klasik ve elektro gitar seçenekleri, gitar aksesuarları, bakım ve tel değişimi hakkında bilgi alın.",
+  title: { default: "Darende Gitar Dersi | Birebir Gitar Eğitimi", template: "%s" },
+  description: "Darende’de başlangıç, çocuk ve yetişkinler için birebir akustik, klasik ve elektro gitar dersleri.",
   applicationName: siteConfig.name,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
-  category: "Müzik eğitimi ve gitar mağazası",
+  category: "Müzik eğitimi",
   alternates: { canonical: siteConfig.url },
   manifest: assetPath("/manifest.webmanifest"),
   icons: { icon: [{ url: assetPath("/icon.png"), type: "image/png", sizes: "512x512" }], apple: [{ url: assetPath("/icon.png"), sizes: "512x512" }] },
-  openGraph: { type: "website", locale: siteConfig.locale, url: siteConfig.url, siteName: siteConfig.name, title: "Darende Gitar Dersi ve Gitar Satışı | Darende Gitar", description: "Darende’de gitar dersi, akustik, klasik ve elektro gitar seçenekleri, gitar aksesuarları, bakım ve tel değişimi hakkında bilgi alın.", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Darende’de Gitarla Tanış — Darende Gitar" }] },
-  twitter: { card: "summary_large_image", title: "Darende Gitar Dersi ve Gitar Satışı | Darende Gitar", description: "Darende’de gitar dersi, gitar seçenekleri, aksesuar, bakım ve tel değişimi.", images: ["/og.png"] },
+  openGraph: { type: "website", locale: siteConfig.locale, url: siteConfig.url, siteName: siteConfig.name, title: "Darende Gitar Dersi | Birebir Gitar Eğitimi", description: "Darende’de başlangıç, çocuk ve yetişkinler için birebir akustik, klasik ve elektro gitar dersleri.", images: [{ url: "/og.png", width: 1200, height: 630, alt: "Darende’de gitar dersi — Darende Gitar" }] },
+  twitter: { card: "summary_large_image", title: "Darende Gitar Dersi | Birebir Gitar Eğitimi", description: "Darende’de seviyene uygun birebir gitar dersleri.", images: ["/og.png"] },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

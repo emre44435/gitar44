@@ -10,12 +10,12 @@ const images = [
   ["/images/02-birebir-gitar-dersi.webp", "Birebir gitar dersi çalışma düzeni"],
   ["/images/03-baslangic-gitar-dersi.webp", "Başlangıç gitar dersi çalışma alanı"],
   ["/images/04-cocuk-gitar-dersi.webp", "Çocuklar için gitar dersi düzeni"],
-  ["/images/05-akustik-gitar.webp", "Akustik gitar"],
-  ["/images/06-klasik-gitar.webp", "Klasik gitar"],
-  ["/images/07-elektro-gitar-amfi.webp", "Elektro gitar ve amfi"],
-  ["/images/08-gitar-satis-vitrini.webp", "Gitar satış vitrini"],
-  ["/images/09-gitar-aksesuarlari.webp", "Gitar aksesuarları"],
-  ["/images/10-gitar-bakim-tel-degisimi.webp", "Gitar bakımı ve tel değişimi"],
+  ["/images/05-akustik-gitar.webp", "Akustik gitar dersi"],
+  ["/images/06-klasik-gitar.webp", "Klasik gitar dersi"],
+  ["/images/07-elektro-gitar-amfi.webp", "Elektro gitar dersi"],
+  ["/images/08-gitar-satis-vitrini.webp", "Gitar dersi stüdyo atmosferi"],
+  ["/images/09-gitar-aksesuarlari.webp", "Gitar dersi çalışma ekipmanları"],
+  ["/images/10-gitar-bakim-tel-degisimi.webp", "Düzenli gitar pratiği"],
 ] as const;
 
 function Row({ items, reverse = false }: { items: typeof images; reverse?: boolean }) {
