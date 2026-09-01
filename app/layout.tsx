@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "@fontsource-variable/sora";
 import { Footer } from "@/components/footer";
+import { GlobalNoteRain } from "@/components/global-note-rain";
 import { Header } from "@/components/header";
 import { MobileWhatsapp } from "@/components/mobile-whatsapp";
 import { assetPath } from "@/lib/paths";
@@ -29,5 +30,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="tr" className={mephisto.variable}><body><a href="#main-content" className="skip-link">İçeriğe geç</a><Header /><div id="main-content">{children}</div><Footer /><MobileWhatsapp /></body></html>;
+  return <html lang="tr" className={mephisto.variable}><body><GlobalNoteRain /><a href="#main-content" className="skip-link">İçeriğe geç</a><Header /><div id="main-content" className="site-content-layer">{children}</div><Footer /><MobileWhatsapp /></body></html>;
 }
