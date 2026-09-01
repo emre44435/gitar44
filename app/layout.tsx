@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import localFont from "next/font/local";
 import "@fontsource-variable/sora";
+import "@fontsource-variable/raleway";
 import { Footer } from "@/components/footer";
 import { GlobalNoteRain } from "@/components/global-note-rain";
 import { Header } from "@/components/header";
@@ -8,8 +8,6 @@ import { MobileWhatsapp } from "@/components/mobile-whatsapp";
 import { assetPath } from "@/lib/paths";
 import { siteConfig } from "@/site-config";
 import "./globals.css";
-
-const mephisto = localFont({ src: "../public/fonts/Mephisto.ttf", variable: "--font-mephisto", display: "swap" });
 
 export const viewport: Viewport = { themeColor: "#0A0D1A", colorScheme: "dark", width: "device-width", initialScale: 1 };
 
@@ -30,5 +28,5 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="tr" className={mephisto.variable}><body><GlobalNoteRain /><a href="#main-content" className="skip-link">İçeriğe geç</a><Header /><div id="main-content" className="site-content-layer">{children}</div><Footer /><MobileWhatsapp /></body></html>;
+  return <html lang="tr"><body><GlobalNoteRain /><a href="#main-content" className="skip-link">İçeriğe geç</a><Header /><div id="main-content" className="site-content-layer">{children}</div><Footer /><MobileWhatsapp /></body></html>;
 }

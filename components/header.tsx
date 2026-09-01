@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Guitar, Menu, X } from "lucide-react";
 import { navigation } from "@/site-config";
 import { cn } from "@/lib/utils";
+import { ButtonLink } from "@/components/ui/button";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -39,7 +40,7 @@ export function Header() {
         <nav aria-label="Ana menü" className="hidden items-center gap-7 lg:flex">
           {navigation.map(({ label, href }) => <Link key={href} href={href} className="nav-link text-sm text-white/70">{label}</Link>)}
         </nav>
-        <Link href="/iletisim/" className="button-secondary max-md:!hidden !min-h-0 !px-5 !py-2.5">İletişime Geç</Link>
+        <ButtonLink href="/iletisim/" variant="secondary" className="max-md:!hidden !min-h-0 !px-5 !py-2.5">İletişime Geç</ButtonLink>
         <button type="button" className="grid size-11 place-items-center rounded-full border border-white/15 bg-white/5 lg:hidden" onClick={() => setOpen((value) => !value)} aria-expanded={open} aria-controls="mobile-navigation" aria-label={open ? "Menüyü kapat" : "Menüyü aç"}>
           {open ? <X aria-hidden="true" size={21} /> : <Menu aria-hidden="true" size={21} />}
         </button>
