@@ -35,7 +35,7 @@ export function ViewportVideo({ src, poster, alt, className }: { src: string; po
   return (
     <div ref={containerRef} className={cn("viewport-video", className)}>
       <SiteImage src={poster} alt={alt} fill sizes="100vw" className="viewport-video-poster object-cover" />
-      <video ref={videoRef} className="viewport-video-media" muted loop playsInline preload="none" poster={assetPath(poster)} onCanPlay={(event) => event.currentTarget.classList.add("is-ready")} />
+      <video ref={videoRef} className="viewport-video-media" autoPlay muted loop playsInline preload="none" poster={assetPath(poster)} onCanPlay={(event) => event.currentTarget.classList.add("is-ready")} />
     </div>
   );
 }

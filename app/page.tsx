@@ -55,7 +55,7 @@ export default function Home() {
     <main>
       <StructuredData data={{ "@context": "https://schema.org", "@graph": [organization, localBusiness, website, faqLd] }} />
       <section className="hero-shell relative isolate min-h-[92svh] overflow-hidden border-b border-white/10">
-        <ViewportVideo src="/videos/studio-sound.mp4" poster="/video-posters/studio-sound.png" alt="Gitar, mikrofon ve kayıt ekipmanlarıyla turuncu ışıklı müzik stüdyosu" className="absolute inset-0 -z-20" />
+        <ViewportVideo src="/videos/studio-sound.mp4" poster="/video-posters/studio-sound.png" alt="Gitar, mikrofon ve kayıt ekipmanlarıyla turuncu ışıklı müzik stüdyosu" className="hero-banner-video absolute inset-0 -z-20" />
         <div className="hero-note-veil absolute inset-0 -z-10" aria-hidden="true" />
         <div className="site-container flex min-h-[92svh] items-center pb-24 pt-32 lg:pb-28 lg:pt-28">
           <Reveal className="hero-copy relative z-10 w-full max-w-[64rem]">

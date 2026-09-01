@@ -42,6 +42,7 @@ button { font: inherit; color: inherit; }
 .hero-note-veil { background: radial-gradient(circle at 72% 43%, rgba(252,58,48,.12), transparent 27%), linear-gradient(90deg, rgba(5,6,12,.96) 0%, rgba(5,6,12,.78) 39%, rgba(5,6,12,.28) 66%, rgba(5,6,12,.5) 100%), linear-gradient(180deg, rgba(5,6,12,.18), transparent 60%, rgba(5,6,12,.72)); }
 .hero-copy { padding: clamp(1.25rem, 3vw, 2.5rem) 0; }
 .hero-copy::before { content: ""; position: absolute; z-index: -1; inset: -12% -10% -12% -8%; width: min(72rem, 108%); border-radius: 50%; background: radial-gradient(ellipse at 35% 50%, rgba(5,6,12,.5), transparent 68%); filter: blur(18px); pointer-events: none; }
+.hero-shell { min-height: max(46rem, 92svh); }
 .viewport-video { position: relative; overflow: hidden; background: #070912; }
 .viewport-video-poster, .viewport-video-media { position: absolute; inset: 0; width: 100%; height: 100%; }
 .viewport-video-poster { opacity: 1; transition: opacity 1.2s ease; }
@@ -54,6 +55,9 @@ button { font: inherit; color: inherit; }
 .chroma-video-canvas.is-ready { opacity: 1; }
 .chroma-video.is-ready .chroma-video-fallback { opacity: 0; }
 .hero-shell > .viewport-video { position: absolute; inset: 0; }
+.hero-banner-video { width: 100%; height: 100%; min-width: 100%; min-height: 100%; }
+.hero-banner-video .viewport-video-poster,
+.hero-banner-video .viewport-video-media { width: 100%; height: 100%; min-width: 100%; min-height: 100%; object-fit: cover; object-position: 50% 50%; }
 .hero-marquee { position: absolute; inset-inline: 0; bottom: 0; overflow: hidden; border-top: 1px solid rgba(255,255,255,.1); background: rgba(7,8,15,.72); padding-block: .85rem; backdrop-filter: blur(14px); }
 .hero-marquee > div { display: flex; width: max-content; align-items: center; gap: 1.8rem; color: rgba(255,255,255,.64); font-size: .68rem; font-weight: 800; letter-spacing: .22em; animation: marquee-flow 24s linear infinite; }
 .hero-marquee i { color: var(--coral); font-style: normal; }
@@ -155,6 +159,11 @@ button { font: inherit; color: inherit; }
   .note-rain-veil { background: linear-gradient(180deg, rgba(5,6,12,.77), rgba(5,6,12,.58) 45%, rgba(5,6,12,.8)); }
   .hero-note-veil { background: linear-gradient(180deg, rgba(5,6,12,.88), rgba(5,6,12,.52) 48%, rgba(5,6,12,.86)); }
   .hero-copy::before { inset: -8% -4%; width: 108%; }
+  .hero-shell { min-height: max(51.5rem, 100svh); }
+  .hero-shell > .site-container { min-height: max(51.5rem, 100svh); padding-top: 7.25rem; padding-bottom: 5.75rem; }
+  .hero-banner-video .viewport-video-poster,
+  .hero-banner-video .viewport-video-media { object-position: 62% center; transform: scale(1.025); }
+  .hero-banner-video .viewport-video-media.is-ready { transform: scale(1.065); }
   .kid-video-card-one, .kid-video-card-two { transform: none; }
 }
 
@@ -162,6 +171,14 @@ button { font: inherit; color: inherit; }
   .hero-shell h1 { font-size: 3.05rem !important; }
   .page-hero h1 { font-size: 3.1rem !important; }
   .button-primary, .button-secondary { width: 100%; }
+  .hero-banner-video .viewport-video-poster,
+  .hero-banner-video .viewport-video-media { object-position: 65% center; }
+}
+
+@media (max-width: 767px) and (orientation: landscape) {
+  .hero-shell, .hero-shell > .site-container { min-height: 46rem; }
+  .hero-banner-video .viewport-video-poster,
+  .hero-banner-video .viewport-video-media { object-position: center 52%; }
 }
 
 @media (hover: none), (pointer: coarse) {
