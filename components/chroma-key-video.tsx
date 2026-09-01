@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { Guitar } from "lucide-react";
 import { SiteImage } from "@/components/site-image";
 import { assetPath } from "@/lib/paths";
 import { cn } from "@/lib/utils";
@@ -13,8 +14,8 @@ type FrameVideo = HTMLVideoElement & {
 
 type ChromaKeyVideoProps = {
   src: string;
-  fallbackImage: string;
-  fallbackAlt: string;
+  fallbackImage?: string;
+  fallbackAlt?: string;
   keyColor: [number, number, number];
   similarity?: number;
   smoothness?: number;
@@ -62,7 +63,7 @@ function createShader(gl: WebGLRenderingContext, type: number, source: string) {
   return shader;
 }
 
-export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt, keyColor, similarity = 0.27, smoothness = 0.17, eager = false, className }: ChromaKeyVideoProps) {
+export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor, similarity = 0.27, smoothness = 0.17, eager = false, className }: ChromaKeyVideoProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<FrameVideo>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -177,7 +178,7 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt, keyColor, simi
 
   return (
     <div ref={containerRef} className={cn("chroma-video", className)}>
-      <SiteImage src={fallbackImage} alt={fallbackAlt} fill priority={eager} sizes="(max-width: 768px) 92vw, 52vw" className="chroma-video-fallback object-cover" />
+      {fallbackImage ? <SiteImage src={fallbackImage} alt={fallbackAlt} fill priority={eager} sizes="(max-width: 768px) 92vw, 52vw" className="chroma-video-fallback object-cover" /> : <div className="chroma-video-placeholder" aria-hidden="true"><Guitar /></div>}
       <video ref={videoRef} className="chroma-video-source" muted loop playsInline preload={eager ? "metadata" : "none"} src={eager ? assetPath(src) : undefined} tabIndex={-1} />
       <canvas ref={canvasRef} className="chroma-video-canvas" />
     </div>

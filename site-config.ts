@@ -4,9 +4,8 @@ export const siteConfig = {
   region: "Darende / Malatya",
   locale: "tr_TR",
 
-  // TODO: Yayına almadan önce aşağıdaki boş iletişim alanlarını doldurun.
-  phone: "",
-  whatsapp: "",
+  phone: "0545 464 44 52",
+  whatsapp: "905454644452",
   address: "",
   email: "",
   instagram: "",
@@ -17,7 +16,7 @@ export const siteConfig = {
 export const navigation = [
   { label: "Ana Sayfa", href: "/" },
   { label: "Gitar Dersi", href: "/gitar-dersi/" },
-  { label: "Ders Programları", href: "/#hizmetler" },
+  { label: "Ders Paketleri", href: "/#ders-paketleri" },
   { label: "Hakkımızda", href: "/hakkimizda/" },
   { label: "İletişim", href: "/iletisim/" },
 ] as const;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, Check } from "lucide-react";
+import { ArrowRight, BadgeCheck, BookOpenCheck, Check, CirclePlay, Target } from "lucide-react";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { ContactActions } from "@/components/contact-actions";
 import { SiteImage as Image } from "@/components/site-image";
@@ -24,6 +24,7 @@ export type DetailPageProps = {
 };
 
 export function DetailPage(props: DetailPageProps) {
+  const sectionIcons = [Target, BookOpenCheck, CirclePlay];
   const url = `${siteConfig.url}${props.path}`;
   const breadcrumbLd = {
     "@type": "BreadcrumbList",
@@ -81,7 +82,7 @@ export function DetailPage(props: DetailPageProps) {
 
       <section className="section-shell border-y border-white/8 bg-[#11152b]/55">
         <div className="site-container">
-          <div className="grid gap-5 md:grid-cols-3">{props.sections.map((section, index) => <Reveal key={section.title} delay={index * .06} className="content-card"><span className="text-xs font-bold tracking-[.2em] text-coral">0{index + 1}</span><h2 className="mt-8 text-xl font-semibold">{section.title}</h2><p className="mt-4 text-sm leading-7 text-muted">{section.body}</p></Reveal>)}</div>
+          <div className="grid gap-5 md:grid-cols-3">{props.sections.map((section, index) => { const Icon = sectionIcons[index] ?? BadgeCheck; return <Reveal key={section.title} delay={index * .06} className="content-card"><span className="detail-card-icon"><Icon aria-hidden="true" /></span><h2 className="mt-7 text-xl font-semibold">{section.title}</h2><p className="mt-4 text-sm leading-7 text-muted">{section.body}</p></Reveal>; })}</div>
         </div>
       </section>
 

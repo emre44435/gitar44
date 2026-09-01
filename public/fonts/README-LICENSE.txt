@@ -1,7 +1,0 @@
-The typeface is free for any kind of use with attribution (under the Creative Commons Attribution 4.0 license).
-
-Contact me
-https://t.me/mrdeinr
-
-Like & follow:
-https://www.behance.net/rdvdesign
