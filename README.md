@@ -85,21 +85,23 @@ Alan adının DNS sağlayıcısında kök alan (`@`) için şu dört `A` kaydın
 - `components/` — ortak navigasyon, footer, içerik ve etkileşim bileşenleri
 - `components/ui/` — shadcn uyumlu buton, Glass Card, reveal ve iki sıralı slider
 - `public/images/` — 10 özgün WebP görsel
-- `public/animations/` — `singthesong.svg`
+- `public/videos/` — nota yağmuru, hero gitarı, stüdyo banner'ı ve iki öğrenci videosu
+- `public/video-posters/` — videolar yüklenirken ve azaltılmış hareket modunda kullanılan posterler
 - `public/fonts/` — Mephisto fontu ve lisans notu
 - `site-config.ts` — tek merkezden yönetilen işletme ve iletişim bilgileri
 
 ## Performans ve erişilebilirlik notları
 
-- Hero görseli öncelikli; diğer görseller lazy-load edilir.
-- 3D gitar teli/ses dalgası/sahne ışığı atmosferi tarayıcı boş kaldığında yüklenir; CSS arka planı ilk boyamayı korur.
-- Mobilde atmosfer sadeleşir; `prefers-reduced-motion` ile sürekli hareket durur.
+- Başlık arkasındaki stüdyo videosu posterle açılır ve görünür olduğunda yüklenir.
+- Nota yağmuru arka planı video ile akar; video yüklenene kadar hareketli CSS/poster katmanı görünür.
+- Chroma-key videolar WebGL ile sahneye karışır; desteklenmeyen ortamlarda kaliteli görseller kullanılır.
+- Mobilde atmosfer sadeleşir; `prefers-reduced-motion` ile sürekli hareket durur ve poster alternatifleri gösterilir.
 - Slider kopyaları `aria-hidden` kullanır ve azaltılmış hareket tercihinde yatay kaydırma alanına dönüşür.
 - Klavye odak halkaları, içeriğe geç bağlantısı, tek H1, anlamlı başlık sırası ve açıklayıcı alt metinler bulunur.
 
 ## Varlıklar ve lisanslar
 
-- Darende Gitar paketindeki 10 WebP ve `singthesong.svg`: proje için kullanıcı tarafından sağlanan özgün varlıklar.
+- Darende Gitar paketindeki 10 WebP ile `public/videos/` altındaki beş MP4: proje için kullanıcı tarafından sağlanan özgün varlıklar.
 - `public/og.png`: Codex yerleşik görsel üretim aracıyla oluşturulan sosyal paylaşım kartı; üretim kaydı `docs/IMAGEGEN-PROMPT.md` içindedir.
 - **Mephisto** — RDV Design; CC BY 4.0. Atıf ve kaynak bilgisi `public/fonts/README-LICENSE.txt` içindedir.
 - **Sora Variable** — `@fontsource-variable/sora`; SIL Open Font License 1.1.

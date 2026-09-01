@@ -1,9 +1,11 @@
 import Link from "next/link";
-import { BadgeCheck, MapPin, UsersRound } from "lucide-react";
+import { BadgeCheck, MapPin, Music2, Play, UsersRound } from "lucide-react";
+import { ChromaKeyVideo } from "@/components/chroma-key-video";
 import { ContactActions } from "@/components/contact-actions";
 import { SectionHeading } from "@/components/section-heading";
 import { SiteImage as Image } from "@/components/site-image";
 import { StructuredData } from "@/components/structured-data";
+import { ViewportVideo } from "@/components/viewport-video";
 import { ButtonLink } from "@/components/ui/button";
 import { GlassCard } from "@/components/ui/glass-card";
 import { InfiniteSliderHorizontal } from "@/components/ui/infinite-slider-horizontal";
@@ -53,20 +55,23 @@ export default function Home() {
     <main>
       <StructuredData data={{ "@context": "https://schema.org", "@graph": [organization, localBusiness, website, faqLd] }} />
       <section className="hero-shell relative isolate min-h-[92svh] overflow-hidden border-b border-white/10">
+        <ViewportVideo src="/videos/studio-sound.mp4" poster="/video-posters/studio-sound.png" alt="Gitar, mikrofon ve kayıt ekipmanlarıyla turuncu ışıklı müzik stüdyosu" className="absolute inset-0 -z-20" />
         <div className="hero-note-veil absolute inset-0 -z-10" aria-hidden="true" />
-        <div className="site-container grid min-h-[92svh] items-center gap-10 pb-14 pt-32 lg:grid-cols-[.88fr_1.12fr] lg:pb-16 lg:pt-28">
+        <div className="site-container grid min-h-[92svh] items-center gap-8 pb-24 pt-32 lg:grid-cols-[.92fr_1.08fr] lg:pb-28 lg:pt-28">
           <Reveal className="relative z-10 max-w-2xl">
-            <p className="eyebrow mb-6">Darende · Malatya</p>
-            <h1 className="font-display text-[clamp(3.55rem,8vw,7.6rem)] leading-[.84] tracking-[-.045em] text-balance">Darende’de<span className="block text-coral">Gitarla Tanış</span></h1>
-            <p className="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">Gitar öğrenmek veya sana uygun gitarı bulmak için doğru yerdesin.</p>
+            <p className="eyebrow mb-6">Darende · Malatya · Müzik burada başlar</p>
+            <h1 className="font-display text-[clamp(4.2rem,9vw,9rem)] leading-[.78] tracking-[-.055em] text-balance">Sesini<span className="block text-coral">Bul.</span><span className="block">Çalmaya Başla.</span></h1>
+            <p className="mt-7 max-w-xl text-base leading-7 text-white/68 sm:text-lg sm:leading-8">İlk akordan sahne hissine; gitar dersi, doğru enstrüman seçimi ve bakım desteği tek bir yaratıcı dünyada.</p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row"><ButtonLink href="/gitar-dersi/">Gitar Dersi Al</ButtonLink><ButtonLink href="/gitar-satisi/" variant="secondary">Gitarları İncele</ButtonLink></div>
-            <p className="mt-9 flex items-center gap-3 text-xs uppercase tracking-[.18em] text-white/55"><span className="h-px w-9 bg-coral" aria-hidden="true" />Darende’de gitar dersi, gitar satışı ve bakım hizmetleri</p>
+            <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-[.68rem] font-bold uppercase tracking-[.18em] text-white/48"><span className="flex items-center gap-2"><Music2 size={14} className="text-coral" /> Birebir ders</span><span>Akustik · Klasik · Elektro</span><span>Bakım & tel</span></div>
           </Reveal>
-          <Reveal delay={.12} className="relative min-h-[45svh] lg:min-h-[66svh]">
-            <div className="absolute inset-0 overflow-hidden rounded-[2rem] border border-white/10 bg-navy shadow-2xl shadow-black/40"><Image src="/images/01-hero-gitarlar.webp" alt="Akustik, klasik ve elektro gitarların yer aldığı Darende Gitar stüdyosu" fill priority sizes="(max-width: 1024px) 92vw, 58vw" className="object-cover object-[67%_center] lg:object-center" /><div className="absolute inset-0 bg-gradient-to-t from-[#0a0d1a]/70 via-transparent to-transparent" /></div>
-            <div className="absolute -bottom-5 left-5 right-5 flex items-center justify-between rounded-2xl border border-white/10 bg-[#11152b]/85 px-5 py-4 backdrop-blur-xl sm:left-8 sm:right-auto sm:min-w-72"><div><p className="text-xs uppercase tracking-[.18em] text-coral">Tek bir yerde</p><p className="mt-1 font-semibold">Öğren · Seç · Çalmaya Başla</p></div><span className="signal" aria-hidden="true"><i /><i /><i /><i /></span></div>
+          <Reveal delay={.12} className="hero-video-stage relative min-h-[48svh] lg:min-h-[70svh]">
+            <div className="hero-video-orbit" aria-hidden="true" />
+            <ChromaKeyVideo src="/videos/hero-guitar.mp4" fallbackImage="/images/01-hero-gitarlar.webp" fallbackAlt="Darende Gitar stüdyosundaki gitarlar" keyColor={[0.49, 0.91, 0.52]} similarity={0.34} smoothness={0.18} eager className="absolute inset-0" />
+            <div className="hero-video-label"><span className="grid size-10 place-items-center rounded-full bg-red text-white"><Play size={16} fill="currentColor" /></span><div><p>Hareketli gitar deneyimi</p><strong>Öğren · Seç · Çal</strong></div></div>
           </Reveal>
         </div>
+        <div className="hero-marquee" aria-hidden="true"><div><span>GİTAR DERSİ</span><i>✦</i><span>GİTAR SATIŞI</span><i>✦</i><span>BAKIM & TEL</span><i>✦</i><span>DARENDE</span><i>✦</i><span>GİTAR DERSİ</span><i>✦</i><span>GİTAR SATIŞI</span></div></div>
       </section>
 
       <section id="hizmetler" className="section-shell">
@@ -75,6 +80,16 @@ export default function Home() {
 
       <section className="section-shell border-y border-white/8 bg-[#11152b]/55">
         <div className="site-container"><Reveal><SectionHeading eyebrow="Üç farklı karakter" title="Hangi gitar senin sesine daha yakın?" copy="Her gitar türü farklı bir dokunuş, ton ve kullanım deneyimi sunar. Seçimini müzik hedefinle birlikte düşün." /></Reveal><div className="mt-12 grid gap-5 lg:grid-cols-3">{guitars.map((item, index) => <Reveal key={item.title} delay={index * .06}><Link href={item.href} className="image-card group relative block aspect-[3/4] overflow-hidden rounded-[1.8rem] border border-white/10"><Image src={item.image} alt={item.alt} fill sizes="(max-width: 1024px) 92vw, 30vw" className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" /><div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" /><div className="absolute inset-x-0 bottom-0 p-7"><p className="text-xs uppercase tracking-[.2em] text-coral">{item.label}</p><h3 className="font-display mt-2 text-4xl">{item.title}</h3></div></Link></Reveal>)}</div></div>
+      </section>
+
+      <section className="kids-stage section-shell overflow-hidden">
+        <div className="site-container grid items-center gap-12 lg:grid-cols-[.76fr_1.24fr] lg:gap-16">
+          <Reveal><p className="eyebrow mb-5">Çocuklar için gitar</p><h2 className="font-display text-[clamp(3.4rem,7vw,7rem)] leading-[.82] tracking-[-.045em]">Merakı ritme,<span className="block text-coral">ritmi özgüvene.</span></h2><p className="mt-7 max-w-xl text-base leading-8 text-white/65">Yaşa ve dikkat süresine uygun küçük hedefler; eğlenceli, anlaşılır ve cesaret veren bir öğrenme düzeni.</p><div className="mt-8"><ButtonLink href="/gitar-dersi/">Çocuk gitar dersini incele</ButtonLink></div></Reveal>
+          <div className="grid gap-5 sm:grid-cols-2">
+            <Reveal className="kid-video-card kid-video-card-one"><ChromaKeyVideo src="/videos/young-guitarist-1.mp4" fallbackImage="/images/04-cocuk-gitar-dersi.webp" fallbackAlt="Çocuk gitar dersi" keyColor={[0.48, 0.76, 0.91]} similarity={0.3} smoothness={0.19} className="aspect-[4/5]" /><div><span>01</span><strong>Ritmi keşfet</strong></div></Reveal>
+            <Reveal delay={.08} className="kid-video-card kid-video-card-two sm:mt-16"><ChromaKeyVideo src="/videos/young-guitarist-2.mp4" fallbackImage="/images/02-birebir-gitar-dersi.webp" fallbackAlt="Elektro gitar çalan genç öğrenci" keyColor={[0.45, 0.76, 0.91]} similarity={0.3} smoothness={0.19} className="aspect-[4/5]" /><div><span>02</span><strong>Sahneye hazırlan</strong></div></Reveal>
+          </div>
+        </div>
       </section>
 
       <section className="slider-section overflow-hidden py-20 sm:py-28"><div className="site-container mb-10"><Reveal><SectionHeading eyebrow="Stüdyodan seçkiler" title="Gitarın her hâli burada." /></Reveal></div><InfiniteSliderHorizontal /></section>

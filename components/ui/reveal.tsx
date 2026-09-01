@@ -8,9 +8,9 @@ export function Reveal({ children, className, delay = 0 }: { children: React.Rea
   return (
     <motion.div
       className={className}
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      animate={reduceMotion ? { opacity: 1, y: 0 } : undefined}
-      whileInView={reduceMotion ? undefined : { opacity: 1, y: 0 }}
+      initial={false}
+      animate={{ opacity: 1, y: 0 }}
+      whileInView={reduceMotion ? undefined : { y: [8, 0] }}
       viewport={{ once: true, amount: 0.18 }}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
     >
