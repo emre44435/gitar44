@@ -73,7 +73,7 @@ export default function Home() {
       <StructuredData data={{ "@context": "https://schema.org", "@graph": [organization, localBusiness, website, faqLd] }} />
 
       <section className="hero-shell relative isolate overflow-hidden border-b border-white/10">
-        <ViewportVideo src="/videos/studio-sound.mp4" poster="/video-posters/studio-sound.png" alt="Gitar ve kayıt ekipmanlarıyla turuncu ışıklı müzik stüdyosu" className="hero-banner-video absolute inset-0 -z-20" />
+        <ViewportVideo src="/videos/studio-sound.mp4" poster="/video-posters/studio-sound.png" alt="Gitar ve kayıt ekipmanlarıyla turuncu ışıklı müzik stüdyosu" className="hero-banner-video absolute inset-0 -z-20" desktopOnly />
         <div className="hero-note-veil absolute inset-0 -z-10" aria-hidden="true" />
         <div className="site-container flex min-h-[92svh] items-center pb-24 pt-28 lg:pb-28">
           <Reveal className="hero-copy relative z-10 w-full max-w-[64rem]">
@@ -82,7 +82,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-base leading-7 text-white/72 sm:text-lg sm:leading-8">Seviyene, yaşına ve müzik zevkine göre hazırlanan birebir gitar dersleriyle ilk akordan sevdiğin şarkılara güvenle ilerle.</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row"><ButtonLink href="/iletisim/">Ders İçin İletişime Geç</ButtonLink><ButtonLink href="#ders-paketleri" variant="secondary">Kampanyalı Paketleri Gör</ButtonLink></div>
             <div className="hero-trust-row"><span><Music2 size={15} /> Birebir ders</span><span><UsersRound size={15} /> Çocuk · Genç · Yetişkin</span><span><GraduationCap size={15} /> Kişisel ders planı</span></div>
-            <div className="hero-mini-banner" aria-label="Gitar dersi hareketli tanıtım afişi"><ViewportVideo src="/videos/hero-guitar.mp4" poster="/images/01-hero-gitarlar.webp" alt="Gitar dersi tanıtım animasyonu" /></div>
+            <div className="hero-mini-banner" aria-label="Gitar dersi hareketli tanıtım afişi"><div className="hero-mini-copy"><small>Ritmi gör · Müziği hisset</small><strong>Gitarla tanışmaya hazırsan ilk nota burada.</strong></div><ChromaKeyVideo src="/videos/hero-guitar.mp4" keyColor={[0.5, 0.9, 0.56]} similarity={0.24} smoothness={0.16} eager className="hero-guitar-chroma" /></div>
           </Reveal>
         </div>
         <div className="hero-marquee" aria-hidden="true"><div><span>BİREBİR GİTAR DERSİ</span><i>♪</i><span>GÜVENLİ BAŞLANGIÇ</span><i>♫</i><span>ÇOCUK · GENÇ · YETİŞKİN</span><i>♪</i><span>DARENDE / MALATYA</span><i>♫</i><span>KENDİ HIZINDA İLERLE</span></div></div>
@@ -101,7 +101,7 @@ export default function Home() {
           <Reveal><p className="eyebrow mb-5">Çocuklar için gitar</p><h2 className="font-display text-[clamp(3rem,6vw,6.5rem)] leading-[.88]">Merakı ritme,<span className="block text-coral">ritmi özgüvene.</span></h2><p className="mt-7 max-w-xl text-base leading-8 text-white/65">Yaşa ve dikkat süresine uygun küçük hedefler; eğlenceli, anlaşılır ve cesaret veren bir öğrenme düzeni.</p><div className="mt-8"><ButtonLink href="/gitar-dersi/">Çocuk Gitar Dersini İncele</ButtonLink></div></Reveal>
           <div className="kids-video-grid">
             <Reveal className="kid-video-card"><ChromaKeyVideo src="/videos/young-guitarist-1.mp4" keyColor={[0.48, 0.76, 0.91]} similarity={0.3} smoothness={0.19} className="kid-animation-frame" /><div><span className="kid-card-icon"><Music2 /></span><strong>Ritmi keşfet</strong></div></Reveal>
-            <Reveal delay={.08} className="kid-video-card lg:mt-12"><ChromaKeyVideo src="/videos/young-guitarist-2.mp4" keyColor={[0.45, 0.76, 0.91]} similarity={0.3} smoothness={0.19} className="kid-animation-frame" /><div><span className="kid-card-icon"><Sparkles /></span><strong>Sahneye hazırlan</strong></div></Reveal>
+            <Reveal delay={.08} className="kid-video-card"><ChromaKeyVideo src="/videos/young-guitarist-2.mp4" keyColor={[0.45, 0.76, 0.91]} similarity={0.3} smoothness={0.19} className="kid-animation-frame" /><div><span className="kid-card-icon"><Sparkles /></span><strong>Sahneye hazırlan</strong></div></Reveal>
           </div>
         </div>
       </section>

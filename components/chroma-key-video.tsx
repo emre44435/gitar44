@@ -5,7 +5,6 @@ import { Guitar } from "lucide-react";
 import { SiteImage } from "@/components/site-image";
 import { assetPath } from "@/lib/paths";
 import { cn } from "@/lib/utils";
-import { useHydratedReducedMotion } from "@/lib/use-hydrated-reduced-motion";
 
 type FrameVideo = HTMLVideoElement & {
   requestVideoFrameCallback?: (callback: () => void) => number;
@@ -67,13 +66,12 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<FrameVideo>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const reduceMotion = useHydratedReducedMotion();
 
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
     const canvas = canvasRef.current;
-    if (!container || !video || !canvas || reduceMotion) return;
+    if (!container || !video || !canvas) return;
 
     const gl = canvas.getContext("webgl", { alpha: true, antialias: false, premultipliedAlpha: true });
     if (!gl) return;
@@ -123,7 +121,7 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
     const renderFrame = () => {
       if (!visible || video.paused || video.ended) return;
       if (video.readyState >= 2) {
-        const width = Math.min(video.videoWidth || 1280, 1280);
+        const width = Math.min(video.videoWidth || 720, 720);
         const height = Math.round(width * ((video.videoHeight || 720) / (video.videoWidth || 1280)));
         if (canvas.width !== width || canvas.height !== height) {
           canvas.width = width;
@@ -158,7 +156,7 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
       video.pause();
     };
 
-    const observer = new IntersectionObserver(([entry]) => entry.isIntersecting ? start() : stop(), { rootMargin: "180px" });
+    const observer = new IntersectionObserver(([entry]) => entry.isIntersecting ? start() : stop(), { rootMargin: "1000px" });
     observer.observe(container);
     if (eager) start();
 
@@ -174,12 +172,12 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
       gl.deleteShader(vertex);
       gl.deleteShader(fragment);
     };
-  }, [eager, keyColor, reduceMotion, similarity, smoothness, src]);
+  }, [eager, keyColor, similarity, smoothness, src]);
 
   return (
     <div ref={containerRef} className={cn("chroma-video", className)}>
       {fallbackImage ? <SiteImage src={fallbackImage} alt={fallbackAlt} fill priority={eager} sizes="(max-width: 768px) 92vw, 52vw" className="chroma-video-fallback object-cover" /> : <div className="chroma-video-placeholder" aria-hidden="true"><Guitar /></div>}
-      <video ref={videoRef} className="chroma-video-source" muted loop playsInline preload={eager ? "metadata" : "none"} src={eager ? assetPath(src) : undefined} tabIndex={-1} />
+      <video ref={videoRef} className="chroma-video-source" muted loop playsInline preload="metadata" src={assetPath(src)} tabIndex={-1} />
       <canvas ref={canvasRef} className="chroma-video-canvas" />
     </div>
   );

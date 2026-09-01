@@ -6,7 +6,7 @@ import { assetPath } from "@/lib/paths";
 import { cn } from "@/lib/utils";
 import { useHydratedReducedMotion } from "@/lib/use-hydrated-reduced-motion";
 
-export function ViewportVideo({ src, poster, alt, className }: { src: string; poster: string; alt: string; className?: string }) {
+export function ViewportVideo({ src, poster, alt, className, desktopOnly = false }: { src: string; poster: string; alt: string; className?: string; desktopOnly?: boolean }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const reduceMotion = useHydratedReducedMotion();
@@ -14,7 +14,7 @@ export function ViewportVideo({ src, poster, alt, className }: { src: string; po
   useEffect(() => {
     const container = containerRef.current;
     const video = videoRef.current;
-    if (!container || !video || reduceMotion) return;
+    if (!container || !video || reduceMotion || (desktopOnly && window.matchMedia("(max-width: 767px)").matches)) return;
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
@@ -30,7 +30,7 @@ export function ViewportVideo({ src, poster, alt, className }: { src: string; po
 
     observer.observe(container);
     return () => observer.disconnect();
-  }, [reduceMotion, src]);
+  }, [desktopOnly, reduceMotion, src]);
 
   return (
     <div ref={containerRef} className={cn("viewport-video", className)}>
