@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Darende Gitar Dersi",
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://darendegitar.com").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://darendegitar.site").replace(/\/$/, ""),
   region: "Darende / Malatya",
   locale: "tr_TR",
 

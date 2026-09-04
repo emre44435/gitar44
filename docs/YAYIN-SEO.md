@@ -9,7 +9,7 @@ Odak: Darende gitar dersi, Darende özel gitar dersi, birebir gitar eğitimi, ç
 Google anahtar kelime tekrarını önermez: https://developers.google.com/search/docs/fundamentals/seo-starter-guide
 Başlık rehberi: https://developers.google.com/search/docs/appearance/title-link
 
-GitHub Actions, depo adına göre basePath ve canonical URL üretir. ZIP içindeki dosyaları depo köküne koyun; Settings > Pages > GitHub Actions seçin. Bu paket özel alan adına yönlendiren eski CNAME dosyasını içermez.
+GitHub Actions, https://darendegitar.site alan adı için kök dizinden yayın yapar; basePath boştur. Canonical, sosyal paylaşım ve site haritası URL’leri bu alan adına göre üretilir. ZIP içindeki dosyaları depo köküne koyun; Settings > Pages > GitHub Actions seçin. Custom domain alanına darendegitar.site yazın ve alan adınızın DNS ayarlarını GitHub Pages’a bağlayın. public/CNAME bu alan adını içerir. Alan adı bağlanmadan önce eski github.io/depo/ adresi için hazırlanmamıştır.
 
 Yayından sonra Search Console mülk doğrulaması ve sitemap.xml gönderimi site sahibi tarafından yapılmalıdır. Google İşletme Profili için gerçek adres, çalışma saatleri ve doğrulama gerekir; bilinmeyen bilgiler uydurulmadı. Yorum taslakları açıkça temsili olarak etiketlendi; gerçek yorumlar sağlanınca değiştirin.
 

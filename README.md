@@ -1,6 +1,6 @@
 # Darende Gitar
 
-`darendegitar.com` için hazırlanmış, mobil öncelikli ve statik olarak dışa aktarılabilen kurumsal web sitesi. Proje Next.js App Router, React, TypeScript, Tailwind CSS, shadcn/ui klasör yapısı, Framer Motion ve yerel font/görsel varlıkları kullanır.
+`darendegitar.site` için hazırlanmış, mobil öncelikli ve statik olarak dışa aktarılabilen kurumsal web sitesi. Proje Next.js App Router, React, TypeScript, Tailwind CSS, shadcn/ui klasör yapısı, Framer Motion ve yerel font/görsel varlıkları kullanır.
 
 ## Kurulum
 
@@ -54,19 +54,19 @@ git push -u origin main
 
 `.github/workflows/deploy.yml`, `main` dalına her gönderimde bağımlılıkları kurar, statik build alır ve `out/` klasörünü GitHub Pages’a yükler.
 
-Workflow, proje deposunun adını otomatik olarak GitHub Pages alt yolu şeklinde build'e ekler. Böylece site özel alan adı bağlanmadan önce de `KULLANICI.github.io/REPO/` adresinde CSS, JavaScript ve görselleriyle eksiksiz çalışır.
+Workflow, `https://darendegitar.site` için boş basePath ile derleme yapar. Dosyalar özel alan adının kökünden sunulur. Bu sürümü kullanırken özel alan adını ve DNS bağlantısını tamamlayın.
 
 1. GitHub reposunda **Settings → Pages** bölümünü açın.
 2. **Build and deployment → Source** alanında **GitHub Actions** seçin.
 3. `main` dalına gönderim yaptıktan sonra **Actions** sekmesindeki iş akışının tamamlanmasını bekleyin.
-4. Pages ayarındaki **Custom domain** alanına `darendegitar.com` yazın.
+4. Pages ayarındaki **Custom domain** alanına `darendegitar.site` yazın.
 5. DNS yayıldıktan sonra **Enforce HTTPS** seçeneğini etkinleştirin.
 
 `public/CNAME` içinde alan adı, `public/.nojekyll` içinde Jekyll devre dışı bırakma işareti hazırdır.
 
-Özel alan adı etkinleştirildiğinde workflow'daki `NEXT_PUBLIC_BASE_PATH` ve `NEXT_PUBLIC_SITE_URL` ortam değerlerini kaldırıp yeniden build alın; özel alan adı sitenin kökünden hizmet verir.
+Workflow alan adı için hazırdır: `NEXT_PUBLIC_BASE_PATH` boş, `NEXT_PUBLIC_SITE_URL` ise `https://darendegitar.site` olarak ayarlanmıştır.
 
-## `darendegitar.com` DNS ayarları
+## `darendegitar.site` DNS ayarları
 
 Alan adının DNS sağlayıcısında kök alan (`@`) için şu dört `A` kaydını ekleyin:
 
