@@ -14,8 +14,8 @@ export function pageMetadata(title: string, description: string, path: string): 
       title,
       description,
       url,
-      images: [{ url: "/og.png", width: 1200, height: 630, alt: "Darende Gitar" }],
+      images: [{ url: `${siteConfig.url}/og.png`, width: 1200, height: 630, alt: siteConfig.name }],
     },
-    twitter: { card: "summary_large_image", title, description, images: ["/og.png"] },
+    twitter: { card: "summary_large_image", title, description, images: [`${siteConfig.url}/og.png`] },
   };
 }

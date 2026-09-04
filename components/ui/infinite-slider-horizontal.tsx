@@ -53,7 +53,7 @@ function Row({ items, reverse = false }: { items: typeof images; reverse?: boole
   if (reduceMotion) return <div className="flex snap-x gap-4 overflow-x-auto px-4 pb-3">{content}</div>;
 
   return (
-    <div className="slider-row overflow-hidden" aria-label="Darende Gitar görsel galerisi" onMouseEnter={() => setSlowed(true)} onMouseLeave={() => setSlowed(false)}>
+    <div className="slider-row overflow-hidden" aria-label="Darende Gitar Dersi görsel galerisi" onMouseEnter={() => setSlowed(true)} onMouseLeave={() => setSlowed(false)}>
       <motion.div
         className="flex w-max gap-4"
         style={{ x }}

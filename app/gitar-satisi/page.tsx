@@ -1,7 +1,7 @@
 import { DetailPage, type DetailPageProps } from "@/components/detail-page";
 import { pageMetadata } from "@/lib/seo";
 
-export const metadata = pageMetadata("Darende Birebir Gitar Dersi | Darende Gitar", "Darende’de seviyenize ve müzik hedefinize göre hazırlanan birebir gitar dersi programını inceleyin.", "/gitar-satisi/");
+export const metadata = pageMetadata("Darende Birebir Gitar Dersi | Darende Gitar Dersi", "Darende’de seviyenize ve müzik hedefinize göre hazırlanan birebir gitar dersi programını inceleyin.", "/gitar-satisi/");
 
 const data: DetailPageProps = {
   path: "/gitar-satisi/", eyebrow: "Birebir gitar dersi", title: "Ders senin hızında ilerlesin.",

@@ -188,7 +188,7 @@ button { font: inherit; color: inherit; }
 }
 
 @media (max-width: 380px) {
-  .hero-shell h1 { font-size: 3.05rem !important; }
+  .hero-shell h1 { font-size: 2.6rem; }
   .page-hero h1 { font-size: 3.1rem !important; }
   .button-primary, .button-secondary { width: 100%; }
   .hero-banner-video .viewport-video-poster,
@@ -226,7 +226,7 @@ button { font: inherit; color: inherit; }
 h1, h2, h3, p, blockquote { overflow-wrap: break-word; }
 .section-title { max-width: 15ch; font-size: clamp(2.65rem, 5vw, 5rem); line-height: .94; letter-spacing: -.04em; }
 .eyebrow::before { content: "♫"; width: auto; height: auto; background: none; color: currentColor; font-size: 1rem; filter: drop-shadow(0 0 8px rgba(247,144,137,.5)); }
-.hero-title { max-width: 10.5ch; font-size: clamp(3.6rem, 7.25vw, 7.5rem); line-height: .88; letter-spacing: -.045em; text-wrap: balance; }
+.hero-title { max-width: 14ch; font-size: clamp(3.6rem, 7.25vw, 7.5rem); line-height: 1.12; letter-spacing: -.035em; text-wrap: balance; }
 .hero-trust-row { display: flex; flex-wrap: wrap; gap: .7rem 1.25rem; margin-top: 1.7rem; color: rgba(255,255,255,.58); font-size: .68rem; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
 .hero-trust-row span { display: inline-flex; align-items: center; gap: .45rem; }
 .hero-trust-row svg { color: var(--coral); }
@@ -327,7 +327,7 @@ h1, h2, h3, p, blockquote { overflow-wrap: break-word; }
   .hero-shell::after { content: ""; position: absolute; inset: -12%; z-index: -9; pointer-events: none; background: radial-gradient(circle at 72% 30%, rgba(252,58,48,.19), transparent 25%), radial-gradient(circle at 24% 68%, rgba(247,144,137,.1), transparent 23%); animation: hero-mobile-light 8s ease-in-out infinite alternate; will-change: transform, opacity; }
   .hero-shell > .site-container { padding-top: 5.5rem; padding-bottom: 5.4rem; }
   .hero-copy { padding-block: 1.3rem 2rem; }
-  .hero-title { max-width: 9ch; font-size: clamp(3rem, 15vw, 4.15rem); line-height: .93; letter-spacing: -.05em; }
+  .hero-title { max-width: 14ch; font-size: clamp(2.6rem, 12vw, 4.15rem); line-height: 1.14; letter-spacing: -.035em; }
   .hero-trust-row { display: grid; grid-template-columns: 1fr; gap: .55rem; margin-top: 1.35rem; }
   .hero-mini-banner { width: 100%; height: clamp(7rem, 34vw, 9rem); margin-top: 1rem; }
   .hero-mini-copy { padding: .9rem 0 .9rem .9rem; }

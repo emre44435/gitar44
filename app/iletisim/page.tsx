@@ -12,7 +12,7 @@ import { phoneHref, siteConfig, whatsappHref } from "@/site-config";
 export const metadata: Metadata = pageMetadata("İletişim | Darende Gitar Dersi", "Darende’de birebir gitar dersi, kampanyalı paketler ve uygun günler hakkında bilgi alın.", "/iletisim/");
 
 export default function Page() {
-  const message = "Merhaba, Darende Gitar birebir dersleri ve kampanyalı paketler hakkında bilgi almak istiyorum. Seviyeme uygun program ve müsait günler konusunda yardımcı olabilir misiniz?";
+  const message = "Merhaba, Darende Gitar Dersi birebir dersleri ve kampanyalı paketler hakkında bilgi almak istiyorum. Seviyeme uygun program ve müsait günler konusunda yardımcı olabilir misiniz?";
   const whatsapp = whatsappHref(message);
   const phone = phoneHref();
   const contactItems = [

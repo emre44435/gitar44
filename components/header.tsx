@@ -15,7 +15,7 @@ export function Header() {
     icon: [Home, GraduationCap, Layers3, HandHeart, MessageCircle][index],
     description: ["Dersleri ve yaklaşımı keşfet", "Birebir eğitim programını incele", "Kampanyalı paketleri karşılaştır", "Bizi ve eğitim anlayışımızı tanı", "Hemen bilgi al ve tanış"][index],
   }));
-  const whatsapp = whatsappHref("Merhaba, Darende Gitar birebir dersleri ve kampanyalı paketler hakkında bilgi almak istiyorum. Seviyeme uygun program için yardımcı olabilir misiniz?");
+  const whatsapp = whatsappHref("Merhaba, Darende Gitar Dersi birebir dersleri ve kampanyalı paketler hakkında bilgi almak istiyorum. Seviyeme uygun program için yardımcı olabilir misiniz?");
   const phone = phoneHref();
 
   useEffect(() => {
@@ -40,9 +40,9 @@ export function Header() {
   return (
     <header className={cn("fixed inset-x-0 top-0 z-50 border-b transition-all duration-300", scrolled || open ? "border-white/10 bg-[#0a0d1a]/88 shadow-lg shadow-black/10 backdrop-blur-xl" : "border-transparent bg-transparent")}>
       <div className="site-container flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Darende Gitar ana sayfa" onClick={() => setOpen(false)}>
+        <Link href="/" className="flex min-w-0 items-center gap-2" aria-label="Darende Gitar Dersi ana sayfa" onClick={() => setOpen(false)}>
           <span className="grid size-10 place-items-center rounded-full border border-coral/35 bg-coral/10 text-coral"><Guitar size={20} aria-hidden="true" /></span>
-          <span className="font-display text-2xl tracking-wide">Darende Gitar</span>
+          <span className="font-display text-[clamp(.95rem,4.3vw,1.5rem)] tracking-tight">Darende Gitar Dersi</span>
         </Link>
         <nav aria-label="Ana menü" className="hidden items-center gap-7 lg:flex">
           {navigation.map(({ label, href }) => <Link key={href} href={href} className="nav-link text-sm text-white/70">{label}</Link>)}

@@ -144,7 +144,7 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
       visible = true;
       if (!video.src) video.src = assetPath(src);
       void video.play().then(() => {
-        if (!started) {
+        if (visible && !started) {
           started = true;
           renderFrame();
         }
@@ -153,6 +153,11 @@ export function ChromaKeyVideo({ src, fallbackImage, fallbackAlt = "", keyColor,
 
     const stop = () => {
       visible = false;
+      started = false;
+      if (video.cancelVideoFrameCallback && frameHandle) video.cancelVideoFrameCallback(frameHandle);
+      if (animationHandle) window.cancelAnimationFrame(animationHandle);
+      frameHandle = 0;
+      animationHandle = 0;
       video.pause();
     };
 
